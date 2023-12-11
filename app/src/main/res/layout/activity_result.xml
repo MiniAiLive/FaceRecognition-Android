@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultActivity">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="Identify Result"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/lytImages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/imageEnrolled"
+            android:layout_width="150dp"
+            android:layout_height="150dp">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/imageIdentified"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="20dp"
+            >
+        </ImageView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lytImagesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/lytImages"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <TextView
+            android:text="Enrolled"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            >
+        </TextView>
+
+        <TextView
+            android:text="Identified"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            >
+        </TextView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textPerson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Identified: Person1"
+        android:textSize="18dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lytImagesTitle"
+        >
+    </TextView>
+
+    <TextView
+        android:id="@+id/textSimilarity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Similarity: 0.83"
+        android:textSize="18dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPerson"
+        >
+    </TextView>
+
+    <TextView
+        android:id="@+id/textLiveness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Liveness score: 0.83"
+        android:textSize="18dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSimilarity"
+        >
+    </TextView>
+
+    <TextView
+        android:id="@+id/textYaw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLiveness"
+        >
+    </TextView>
+
+    <TextView
+        android:id="@+id/textRoll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textYaw"
+        >
+    </TextView>
+
+    <TextView
+        android:id="@+id/textPitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textRoll"
+        >
+    </TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

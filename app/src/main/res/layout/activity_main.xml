@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/text_welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/welcome_to"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/text_get_started_msg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_get_started_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/get_started_with"
+            android:textSize="18dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_welcome" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/view_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="#EEE"
+            android:padding="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_get_started_msg">
+
+            <TextView
+                android:id="@+id/text_experience_the_serenity_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/services"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/button_learn"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/button_learn"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="12dp"
+                android:height="30dp"
+                android:backgroundTint="@android:color/white"
+                android:padding="0dp"
+                android:text="@string/learn_more"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="14dp"
+                android:theme="@style/Button.White"
+                app:cornerRadius="0dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_experience_the_serenity_msg"
+                app:strokeWidth="1dp" />
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:src="@drawable/ic_service"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/text_choose_function_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/choose"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_container" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/view_container_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="H,1:1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_choose_function_msg"
+            app:layout_constraintVertical_bias="1.0">
+
+            <Button
+                android:id="@+id/button_enroll"
+                android:layout_width="180dp"
+                android:layout_height="160dp"
+                android:layout_marginRight="12dp"
+                android:backgroundTint="@color/skyBlue"
+                android:drawableTop="@drawable/ic_enroll_face"
+                android:drawablePadding="22dp"
+                android:paddingTop="36dp"
+                android:paddingBottom="18dp"
+                android:text="@string/enroll"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:cornerRadius="0dp"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/button_verify"
+                app:layout_constraintTop_toTopOf="parent"></Button>
+
+            <Button
+                android:id="@+id/button_verify"
+                android:layout_width="180dp"
+                android:layout_height="160dp"
+                android:backgroundTint="@color/skyBlue"
+                android:drawableTop="@drawable/ic_identify_face"
+                android:drawablePadding="22dp"
+                android:paddingTop="36dp"
+                android:paddingBottom="18dp"
+                android:text="@string/identify"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:cornerRadius="0dp"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintLeft_toRightOf="@id/button_enroll"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/button_liveness"
+                android:layout_width="180dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="12dp"
+                android:backgroundTint="@color/skyBlue"
+                android:drawableTop="@drawable/ic_liveness"
+                android:drawablePadding="22dp"
+                android:paddingTop="36dp"
+                android:paddingBottom="18dp"
+                android:text="@string/liveness"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:cornerRadius="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/button_about"
+                app:layout_constraintTop_toBottomOf="@id/button_enroll" />
+
+            <Button
+                android:id="@+id/button_about"
+                android:layout_width="180dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="6dp"
+                android:backgroundTint="@color/skyBlue"
+                android:paddingTop="36dp"
+                android:paddingBottom="18dp"
+                android:drawableTop="@drawable/ic_about"
+                android:drawablePadding="22dp"
+                android:text="@string/about"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:cornerRadius="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintLeft_toRightOf="@id/button_liveness"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_verify" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

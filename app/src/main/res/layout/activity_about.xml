@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".AboutActivity">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="MiniAiLive Technology"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/txtAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical | left"
+        android:text=" We are a leading provider of SDKs for advanced biometric authentication technology, including Face Recognition, Face Liveness Detection, and ID Card Recognition.\n\n
+In addition to biometric authentication solutions, we provide software development services for computer vision and mobile applications\n\n
+With our team's extensive knowledge and proficiency in these areas, we can deliver exceptional results to our clients.\n\n
+If you're interested in learning more about how we can help you, please don't hesitate to get in touch with us today.\n\n\n
+Please contact us:"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/imageEmail"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtAbout"
+        android:tint="@color/md_theme_dark_primary"
+        app:srcCompat="@drawable/ic_email">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/txtMail"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="Email: info@miniai.live"
+        app:layout_constraintStart_toEndOf="@id/imageEmail"
+        app:layout_constraintTop_toTopOf="@id/imageEmail"
+        app:layout_constraintBottom_toBottomOf="@id/imageEmail"
+        >
+    </TextView>
+
+    <ImageView
+        android:id="@+id/imageTelegram"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:tint="@color/md_theme_dark_primary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageEmail"
+        app:srcCompat="@drawable/ic_telegram"></ImageView>
+
+    <TextView
+        android:id="@+id/txtTelegram"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="Telegram: @MiniAiLive"
+        app:layout_constraintStart_toEndOf="@id/imageTelegram"
+        app:layout_constraintTop_toTopOf="@id/imageTelegram"
+        app:layout_constraintBottom_toBottomOf="@id/imageTelegram"
+        >
+    </TextView>
+
+    <ImageView
+        android:id="@+id/imageWhatsApp"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:tint="@color/md_theme_dark_primary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageTelegram"
+        app:srcCompat="@drawable/ic_whatsapp"></ImageView>
+
+    <TextView
+        android:id="@+id/txtWhatsapp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="WhatsApp: +19162702374"
+        app:layout_constraintStart_toEndOf="@id/imageWhatsApp"
+        app:layout_constraintTop_toTopOf="@id/imageWhatsApp"
+        app:layout_constraintBottom_toBottomOf="@id/imageWhatsApp"
+        >
+    </TextView>
+
+    <ImageView
+        android:id="@+id/imageGithub"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:tint="@color/md_theme_dark_primary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageWhatsApp"
+        app:srcCompat="@drawable/ic_github"></ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="Github: https://github.com/miniailive"
+        app:layout_constraintStart_toEndOf="@id/imageGithub"
+        app:layout_constraintTop_toTopOf="@id/imageGithub"
+        app:layout_constraintBottom_toBottomOf="@id/imageGithub"
+        android:autoLink="web"
+        >
+    </TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

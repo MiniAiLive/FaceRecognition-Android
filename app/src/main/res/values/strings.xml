@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">MiniAI-FaceRecognition</string>
+
+    <string name="name_should_not_be_empty">Please input name.</string>
+    <string name="duplicated_name">Duplicated name!</string>
+
+    <string name="multiple_face_detected">Multiple face detected!</string>
+    <string name="no_face_detected">No face detected!</string>
+    <string name="appid_error">AppID Error!</string>
+    <string name="invalid_license">Invalid License!</string>
+    <string name="license_expired">License Expired!</string>
+    <string name="no_activated">No Activated!</string>
+    <string name="init_error">Init Error!</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="name_userlist">Registered Users</string>
+    <string name="register_successed">Register succeed!</string>
+    <string name="delete_user">Delete User</string>
+    <string name="delete">Delete</string>
+    <string name="delete_all">Delete All</string>
+    <string name="select_picture">Select Picture</string>
+    <string name="liveness_check_failed">Liveness check failed!</string>
+    <string name="users">Users</string>
+    <string name="verify_succeed">Verify Succeed!: </string>
+    <string name="verify_timeout">Verify Timeout!</string>
+    <string name="verify_failed">Verify Failed!</string>
+    <string name="liveness_failed">Liveness Check Failed!</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="welcome_to">Welcome to MiniAiLive</string>
+    <string name="get_started_with">Get started with facial recognition</string>
+    <string name="services">Our Services</string>
+    <string name="learn_more">Learn more</string>
+    <string name="choose">Choose your desired function</string>
+    <string name="enroll">Enroll Faces</string>
+    <string name="identify">Identify Faces</string>
+    <string name="liveness">Liveness</string>
+    <string name="liveness_test">Liveness Test</string>
+    <string name="about">About MiniAiLive</string>
+
+    <string name="service_details">
+            <b>MiniAiLive</b> is a provider of Touchless Biometrics Authentication, ID verification solutions. We offer strong security solutions with cutting-edge technologies for facial recognition, liveness detection, and ID document recognition. We also ensure that these solutions seamlessly integrate with our clients’ existing systems.
+
+            \n\n
+
+            <b>Try Our SDKs On Your Server or Application For Free</b>
+
+            \n\n
+
+            At <b>MiniAi</b>, we understand that our clients want to thoroughly test and evaluate our biometric solutions before fully integrating them into their systems.
+            That’s why we offer a free trial period, as well as integration services and support for proof of concepts (PoCs) at no cost.
+            We want to ensure that our clients are completely satisfied with our solutions and confident in their decision to implement them.
+    </string>
+    <string name="button_start">Get Started</string>
+</resources>
