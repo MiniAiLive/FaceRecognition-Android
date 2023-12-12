@@ -6,7 +6,6 @@ import android.graphics.*
 import android.media.Image
 import android.net.Uri
 import android.os.ParcelFileDescriptor
-import android.util.Log
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.ByteArrayOutputStream

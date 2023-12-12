@@ -17,8 +17,6 @@ class MainActivity : AppCompatActivity() {
         private val SELECT_PHOTO_REQUEST_CODE = 1
     }
 
-//    private lateinit var userDb: UserDB
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -26,9 +24,6 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.button_learn).setOnClickListener {
             startActivity(Intent(this, LearnMoreActivity::class.java))
         }
-
-//        userDb = UserDB(this)
-//        userDb.loadUsers()
 
         FaceSDK.createInstance(this)
         val ret = FaceSDK.getInstance().init(assets)

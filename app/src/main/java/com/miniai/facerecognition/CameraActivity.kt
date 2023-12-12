@@ -1,7 +1,6 @@
 package com.miniai.facerecognition;
 
 import android.Manifest
-import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.os.Build
@@ -22,7 +21,6 @@ import androidx.camera.view.PreviewView
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.LifecycleOwner
-import com.fm.face.FaceSDK
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.common.util.concurrent.ListenableFuture
 import java.util.concurrent.Executors
@@ -50,7 +48,7 @@ class CameraActivity : AppCompatActivity(), FrameInferface {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_camera)
 
-        val livenessTestMode = false
+        val isProcMode = 0 // 0: Register, 1: Verify, 2: Liveness Test
 
         previewView = findViewById<PreviewView>(R.id.preview_view)
         viewBackgroundOfMessage = findViewById<View>(R.id.viewBackgroundOfMessage)
@@ -63,7 +61,7 @@ class CameraActivity : AppCompatActivity(), FrameInferface {
         boundingBoxOverlay.setWillNotDraw(false)
         boundingBoxOverlay.setZOrderOnTop(true)
         frameAnalyser =
-            FrameAnalyser(this, boundingBoxOverlay, viewBackgroundOfMessage, textViewMessage, livenessTestMode)
+            FrameAnalyser(this, boundingBoxOverlay, viewBackgroundOfMessage, textViewMessage, isProcMode)
         cameraProviderFuture = ProcessCameraProvider.getInstance(this)
 
         // Remove the status bar to have a full screen experience
@@ -206,8 +204,7 @@ class CameraActivity : AppCompatActivity(), FrameInferface {
     }
 
     override fun onVerify(msg: String) {
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
-        finish()
+
     }
 
 }

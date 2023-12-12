@@ -39,6 +39,9 @@
             android:name=".IdentifyActivity"
             android:exported="false" />
         <activity
+            android:name=".ResultActivity"
+            android:exported="false" />
+        <activity
             android:name=".LivenessTestActivity"
             android:exported="false" />
         <activity

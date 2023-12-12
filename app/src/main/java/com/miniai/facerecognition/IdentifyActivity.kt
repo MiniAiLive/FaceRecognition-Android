@@ -1,19 +1,15 @@
 package com.miniai.facerecognition;
 
 import android.Manifest
-import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.TextUtils
 import android.util.Size
-import android.view.LayoutInflater
 import android.view.View
 import android.view.WindowInsets
 import android.widget.*
-import androidx.appcompat.app.AlertDialog
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.Preview
@@ -22,8 +18,6 @@ import androidx.camera.view.PreviewView
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.LifecycleOwner
-import com.fm.face.FaceSDK
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.common.util.concurrent.ListenableFuture
 import java.util.concurrent.Executors
 
@@ -50,9 +44,11 @@ class IdentifyActivity : AppCompatActivity(), FrameInferface {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_identify)
 
-        val livenessTestMode = false
+        var isProcMode = 1 // 0: Register, 1: Verify, 2: Liveness Test
 
         previewView = findViewById<PreviewView>(R.id.preview_view)
+        viewBackgroundOfMessage = findViewById<View>(R.id.viewBackgroundOfMessage)
+        textViewMessage = findViewById<TextView>(R.id.textViewMessage)
 
         userDb = UserDB(this)
         userDb.loadUsers()
@@ -61,7 +57,7 @@ class IdentifyActivity : AppCompatActivity(), FrameInferface {
         boundingBoxOverlay.setWillNotDraw(false)
         boundingBoxOverlay.setZOrderOnTop(true)
         frameAnalyser =
-            FrameAnalyser(this, boundingBoxOverlay, viewBackgroundOfMessage, textViewMessage, livenessTestMode)
+            FrameAnalyser(this, boundingBoxOverlay, viewBackgroundOfMessage, textViewMessage, isProcMode)
         cameraProviderFuture = ProcessCameraProvider.getInstance(this)
 
         // Remove the status bar to have a full screen experience
@@ -150,4 +146,5 @@ class IdentifyActivity : AppCompatActivity(), FrameInferface {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
         finish()
     }
+
 }

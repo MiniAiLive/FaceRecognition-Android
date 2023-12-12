@@ -10,7 +10,6 @@ import android.util.AttributeSet
 import android.util.Log
 import android.view.SurfaceHolder
 import android.view.SurfaceView
-import androidx.core.graphics.toRectF
 import com.fm.face.FaceBox
 
 // Defines an overlay on which the boxes and text will be drawn.
@@ -30,7 +29,7 @@ class BoundingBoxOverlay( context: Context , attributeSet: AttributeSet )
     var faceBoundingBoxes: List<FaceBox>? = null
     var livenessScore = 0.0f
     var livenessResult: Int = 0
-    var isLiveness:Boolean = true
+    var isProcMode: Int = 2
 
     private var output2OverlayTransform: Matrix = Matrix()
 
@@ -99,7 +98,7 @@ class BoundingBoxOverlay( context: Context , attributeSet: AttributeSet )
                     val boundingBox = RectF(face.left.toFloat(), face.top.toFloat(), face.right.toFloat(), face.bottom.toFloat())
                     output2OverlayTransform.mapRect(boundingBox)
                     val formattedScore = "%.4f".format(livenessScore)
-                    if (!isLiveness) {
+                    if (isProcMode != 2) {
                         if(livenessResult == 0) {
                             canvas?.drawText(
                                 "Fake",

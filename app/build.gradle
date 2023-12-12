@@ -59,5 +59,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     implementation "androidx.compose.runtime:runtime:1.0.0"
+    implementation 'io.github.medyo:android-about-page:2.0.0'
 
 }

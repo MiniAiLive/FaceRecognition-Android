@@ -1,86 +1,51 @@
 package com.miniai.facerecognition
 
-import android.content.Intent
-import android.content.pm.ResolveInfo
-import android.net.Uri
 import android.os.Bundle
-import android.widget.TextView
+import android.view.Gravity
+import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import mehdi.sakout.aboutpage.AboutPage
+import mehdi.sakout.aboutpage.Element
+import java.util.Calendar
 
 class AboutActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_about)
 
-        findViewById<TextView>(R.id.txtMail).setOnClickListener {
-            val intent = Intent(Intent.ACTION_SEND)
-            intent.type = "plain/text"
-            intent.putExtra(Intent.EXTRA_EMAIL, arrayOf("info@miniai.live"))
-            intent.putExtra(Intent.EXTRA_SUBJECT, "License Request")
-            intent.putExtra(Intent.EXTRA_TEXT, "")
-            startActivity(Intent.createChooser(intent, ""))
+        val aboutPage = AboutPage(this)
+            .isRTL(false)
+            .setImage(R.drawable.logo_name)
+            .setDescription("MiniAiLive is a provider of Touchless Biometrics Authentication, ID verification solutions. We offer strong security solutions with cutting-edge technologies for facial recognition, liveness detection, and ID document recognition. We also ensure that these solutions seamlessly integrate with our clients’ existing systems.\n")
+            .addWebsite("https://www.miniai.live/")
+            .addYoutube("UCU3D895D0XiF4TGy02GhN_Q")
+            .addGitHub("MiniAiLive")
+            .addEmail("info@miniai.live")
+            .addItem(getCopyRightsElement())
+//            .addFacebook("")
+//            .addTwitter("")
+//            .addPlayStore("com.x.x")
+//            .addInstagram("")
+            .create()
+        setContentView(aboutPage)
+    }
+
+    fun getCopyRightsElement(): Element? {
+        val copyRightsElement = Element()
+        val copyrights = String.format(
+            getString(R.string.copy_right),
+            Calendar.getInstance()[Calendar.YEAR]
+        )
+        copyRightsElement.setTitle(copyrights)
+        copyRightsElement.setIconDrawable(R.drawable.about_icon_copy_right)
+        copyRightsElement.autoApplyIconTint = true
+        copyRightsElement.setIconTint(mehdi.sakout.aboutpage.R.color.about_item_icon_color)
+        copyRightsElement.iconNightTint = android.R.color.white
+        copyRightsElement.gravity = Gravity.CENTER
+        copyRightsElement.onClickListener = View.OnClickListener {
+            Toast.makeText(this, copyrights, Toast.LENGTH_SHORT).show()
         }
-
-        findViewById<TextView>(R.id.txtWhatsapp).setOnClickListener {
-            val general = Intent(Intent.ACTION_VIEW, Uri.parse("https://com.whatsapp/miniailive"))
-            val generalResolvers: HashSet<String> = HashSet()
-            val generalResolveInfo: List<ResolveInfo> = packageManager.queryIntentActivities(general, 0)
-            for (info in generalResolveInfo) {
-                if (info.activityInfo.packageName != null) {
-                    generalResolvers.add(info.activityInfo.packageName)
-                }
-            }
-
-            val telegram = Intent(Intent.ACTION_VIEW, Uri.parse("https://wa.me/19167142374"))
-            var goodResolver = 0
-
-            val resInfo: List<ResolveInfo> = packageManager.queryIntentActivities(telegram, 0)
-            if (!resInfo.isEmpty()) {
-                for (info in resInfo) {
-                    if (info.activityInfo.packageName != null && !generalResolvers.contains(info.activityInfo.packageName)) {
-                        goodResolver++
-                        telegram.setPackage(info.activityInfo.packageName)
-                    }
-                }
-            }
-
-            if (goodResolver != 1) {
-                telegram.setPackage(null)
-            }
-            if (telegram.resolveActivity(packageManager) != null) {
-                startActivity(telegram)
-            }
-        }
-
-        findViewById<TextView>(R.id.txtTelegram).setOnClickListener {
-            val general = Intent(Intent.ACTION_VIEW, Uri.parse("https://t.com/miniailive"))
-            val generalResolvers: HashSet<String> = HashSet()
-            val generalResolveInfo: List<ResolveInfo> = packageManager.queryIntentActivities(general, 0)
-            for (info in generalResolveInfo) {
-                if (info.activityInfo.packageName != null) {
-                    generalResolvers.add(info.activityInfo.packageName)
-                }
-            }
-
-            val telegram = Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/miniailive"))
-            var goodResolver = 0
-
-            val resInfo: List<ResolveInfo> = packageManager.queryIntentActivities(telegram, 0)
-            if (!resInfo.isEmpty()) {
-                for (info in resInfo) {
-                    if (info.activityInfo.packageName != null && !generalResolvers.contains(info.activityInfo.packageName)) {
-                        goodResolver++
-                        telegram.setPackage(info.activityInfo.packageName)
-                    }
-                }
-            }
-
-            if (goodResolver != 1) {
-                telegram.setPackage(null)
-            }
-            if (telegram.resolveActivity(packageManager) != null) {
-                startActivity(telegram)
-            }
-        }
+        return copyRightsElement
     }
 }
