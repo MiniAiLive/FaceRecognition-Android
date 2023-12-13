@@ -8,6 +8,12 @@
 We provide system integrators with fast, flexible and extremely precise facial recognition that can be deployed across a number of scenarios, including security, access control, public safety, fintech, smart retail and home protection.
 Feel free to use our MiniAI Face Recognition Android SDK.
 
+You can download release APK here.
+
+```
+https://drive.google.com/file/d/1VBr_nYo_TwFM7kPamxP2IFOAFZ43Bhq1/view?usp=sharing
+```
+
 > **Note**
 >
 > SDK is fully on-premise, processing all happens on hosting server and no data leaves server.
