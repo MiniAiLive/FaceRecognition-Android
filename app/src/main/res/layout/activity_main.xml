@@ -1,198 +1,235 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context=".MainActivity">
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    style="@style/parent.contentLayout">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/text_welcome"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:text="@string/welcome_to"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/text_get_started_msg"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/text_get_started_msg"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/get_started_with"
-            android:textSize="18dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_welcome" />
-
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/view_container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:background="#EEE"
-            android:padding="16dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_get_started_msg">
-
-            <TextView
-                android:id="@+id/text_experience_the_serenity_msg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/services"
-                android:textSize="24dp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@id/button_learn"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/button_learn"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="12dp"
-                android:height="30dp"
-                android:backgroundTint="@android:color/white"
-                android:padding="0dp"
-                android:text="@string/learn_more"
-                android:textAllCaps="false"
-                android:textColor="@android:color/black"
-                android:textSize="14dp"
-                android:theme="@style/Button.White"
-                app:cornerRadius="0dp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/text_experience_the_serenity_msg"
-                app:strokeWidth="1dp" />
+            android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/image"
-                android:layout_width="150dp"
-                android:layout_height="90dp"
-                android:src="@drawable/ic_service"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:src="@drawable/company_name" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:src="@drawable/service2" />
 
-        <TextView
-            android:id="@+id/text_choose_function_msg"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="@string/choose"
-            android:textSize="16dp"
-            android:textStyle="bold"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/view_container" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/view_container_buttons"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="H,1:1"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_choose_function_msg"
-            app:layout_constraintVertical_bias="1.0">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/button_enroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="2dp"
+                    android:minHeight="100dp"
+                    app:cardBackgroundColor="@color/whiteBodyColor"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="16dp">
 
-            <Button
-                android:id="@+id/button_enroll"
-                android:layout_width="180dp"
-                android:layout_height="160dp"
-                android:layout_marginRight="12dp"
-                android:backgroundTint="@color/skyBlue"
-                android:drawableTop="@drawable/ic_enroll_face"
-                android:drawablePadding="22dp"
-                android:paddingTop="36dp"
-                android:paddingBottom="18dp"
-                android:text="@string/enroll"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                app:cornerRadius="0dp"
-                app:layout_constraintDimensionRatio="H,1:1"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="@id/button_verify"
-                app:layout_constraintTop_toTopOf="parent"></Button>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="50dp">
 
-            <Button
-                android:id="@+id/button_verify"
-                android:layout_width="180dp"
-                android:layout_height="160dp"
-                android:backgroundTint="@color/skyBlue"
-                android:drawableTop="@drawable/ic_identify_face"
-                android:drawablePadding="22dp"
-                android:paddingTop="36dp"
-                android:paddingBottom="18dp"
-                android:text="@string/identify"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                app:cornerRadius="0dp"
-                app:layout_constraintDimensionRatio="H,1:1"
-                app:layout_constraintLeft_toRightOf="@id/button_enroll"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                        <TextView
+                            android:text="Enroll Faces"
+                            style="@style/viewParent.headerText"
+                            android:textColor="@color/primaryTextColor" />
 
-            <Button
-                android:id="@+id/button_liveness"
-                android:layout_width="180dp"
-                android:layout_height="160dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginRight="12dp"
-                android:backgroundTint="@color/skyBlue"
-                android:drawableTop="@drawable/ic_liveness"
-                android:drawablePadding="22dp"
-                android:paddingTop="36dp"
-                android:paddingBottom="18dp"
-                android:text="@string/liveness"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                app:cornerRadius="0dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintDimensionRatio="H,1:1"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="@id/button_about"
-                app:layout_constraintTop_toBottomOf="@id/button_enroll" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Registering user face data"
+                            android:textStyle="bold"
+                            android:textSize="14sp"/>
 
-            <Button
-                android:id="@+id/button_about"
-                android:layout_width="180dp"
-                android:layout_height="160dp"
-                android:layout_marginTop="6dp"
-                android:backgroundTint="@color/skyBlue"
-                android:paddingTop="36dp"
-                android:paddingBottom="18dp"
-                android:drawableTop="@drawable/ic_about"
-                android:drawablePadding="22dp"
-                android:text="@string/about"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                app:cornerRadius="0dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintDimensionRatio="H,1:1"
-                app:layout_constraintLeft_toRightOf="@id/button_liveness"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/button_verify" />
+                    </LinearLayout>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
 
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/enroll_face"
+                    android:layout_centerVertical="true"
+                    android:elevation="13dp"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.core.widget.NestedScrollView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/button_verify"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="2dp"
+                    android:minHeight="100dp"
+                    app:cardBackgroundColor="@color/whiteBodyColor"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="50dp">
+
+                        <TextView
+                            android:text="Verify Faces"
+                            style="@style/viewParent.headerText"
+                            android:textColor="@color/primaryTextColor" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Matching Face Algorithm (1:1, 1:N)"
+                            android:textStyle="bold"
+                            android:textSize="14sp"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/verify_face"
+                    android:layout_centerVertical="true"
+                    android:elevation="13dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/button_liveness"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="2dp"
+                    android:minHeight="100dp"
+                    app:cardBackgroundColor="@color/whiteBodyColor"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="50dp">
+
+                        <TextView
+                            android:text="Liveness"
+                            style="@style/viewParent.headerText"
+                            android:textColor="@color/primaryTextColor" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Anti-spoofing Face Liveness Test"
+                            android:textStyle="bold"
+                            android:textSize="14sp"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/liveness_test"
+                    android:layout_centerVertical="true"
+                    android:elevation="13dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/button_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="2dp"
+                    android:minHeight="100dp"
+                    app:cardBackgroundColor="@color/whiteBodyColor"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="50dp">
+
+                        <TextView
+                            android:text="About US"
+                            style="@style/viewParent.headerText"
+                            android:textColor="@color/primaryTextColor" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Learn more about MiniAiLive Ltd"
+                            android:textStyle="bold"
+                            android:textSize="14sp"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/about_us"
+                    android:layout_centerVertical="true"
+                    android:elevation="13dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

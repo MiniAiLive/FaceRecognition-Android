@@ -20,4 +20,19 @@
     <color name="yellow">#F4F50A</color>
 
     <color name="md_theme_dark_primary">#D0BCFF</color>
+
+    <color name="bottomNavigationTextColor">#B2B2B2</color>
+    <color name="bottomNavigationTintColor">#B2B2B2</color>
+    <color name="bottomNavigationSelectedColor">#FC4926</color>
+    <color name="statusBarColor">#000</color>
+    <color name="whiteBodyColor">#FCFCFC</color>
+    <color name="darkTextColor">#020000</color>
+    <color name="primaryTextColor">#25C0DE</color>
+    <color name="whiteTextColor">#fff</color>
+    <color name="frutorial_title">#4c4c4c</color>
+
+    <!--colors for light mode-->
+    <color name="contentBodyColor">#D0BCFF</color>
+    <color name="contentTextColor">#FC4926</color>
+    <color name="bottomNavigationBackground">#F7F7F7</color>
 </resources>

@@ -39,7 +39,7 @@
         android:layout_marginBottom="32dp"
         android:clickable="true"
         android:src="@drawable/ic_add_48"
-        app:backgroundTint="@color/purple_500"
+        app:backgroundTint="@color/colorPrimary"
         app:tint="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -53,7 +53,7 @@
         android:layout_marginBottom="8dp"
         android:clickable="true"
         android:src="@drawable/ic_camera_48"
-        app:backgroundTint="@color/purple_500"
+        app:backgroundTint="@color/colorPrimary"
         app:tint="@android:color/black"
         app:layout_constraintBottom_toTopOf="@+id/buttonAdd"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,6 +67,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        style="@style/parent.contentLayout1"
         />
 
 

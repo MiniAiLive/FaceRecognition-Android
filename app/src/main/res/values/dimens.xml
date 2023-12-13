@@ -6,4 +6,14 @@
     <dimen name="fab_margin_land">48dp</dimen>
     <dimen name="fab_margin_w1240dp">200dp</dimen>
     <dimen name="fab_margin_w600dp">48dp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="normalPadding">15dp</dimen>
+    <dimen name="headerTextSize">25sp</dimen>
+    <dimen name="headerMoreTextSize">18sp</dimen>
+    <dimen name="card_margin">5dp</dimen>
+    <dimen name="frutorial_title">15sp</dimen>
 </resources>

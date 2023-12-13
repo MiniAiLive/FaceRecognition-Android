@@ -15,7 +15,7 @@ class AboutActivity : AppCompatActivity() {
         setContentView(R.layout.activity_about)
 
         val aboutPage = AboutPage(this)
-            .isRTL(false)
+//            .isRTL(false)
             .setImage(R.drawable.logo_name)
             .setDescription("MiniAiLive is a provider of Touchless Biometrics Authentication, ID verification solutions. We offer strong security solutions with cutting-edge technologies for facial recognition, liveness detection, and ID document recognition. We also ensure that these solutions seamlessly integrate with our clients’ existing systems.\n")
             .addWebsite("https://www.miniai.live/")

@@ -1,15 +1,16 @@
 package com.miniai.facerecognition
 
+//import android.R
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
-import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import com.fm.face.FaceSDK
-import android.app.AlertDialog
-import android.content.Context
-import android.content.DialogInterface
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,10 +21,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        findViewById<Button>(R.id.button_learn).setOnClickListener {
-            startActivity(Intent(this, LearnMoreActivity::class.java))
-        }
 
         FaceSDK.createInstance(this)
         val ret = FaceSDK.getInstance().init(assets)
@@ -41,25 +38,29 @@ class MainActivity : AppCompatActivity() {
                 showAlertDialog(getString(R.string.init_error))
             }
         } else {
-            findViewById<Button>(R.id.button_enroll).setOnClickListener {
+
+            findViewById<CardView>(R.id.button_enroll).setOnClickListener { // Handle the card view click here
                 val intent = Intent(this, UserActivity::class.java)
                 startActivity(intent)
             }
 
-            findViewById<Button>(R.id.button_verify).setOnClickListener {
+            findViewById<CardView>(R.id.button_verify).setOnClickListener { // Handle the card view click here
                 val intent = Intent(this, IdentifyActivity::class.java)
                 startActivity(intent)
             }
 
-            findViewById<Button>(R.id.button_liveness).setOnClickListener {
+            findViewById<CardView>(R.id.button_liveness).setOnClickListener { // Handle the card view click here
                 val intent = Intent(this, LivenessTestActivity::class.java)
                 startActivity(intent)
             }
         }
 
-        findViewById<Button>(R.id.button_about).setOnClickListener {
+        findViewById<CardView>(R.id.button_about).setOnClickListener { // Handle the card view click here
             startActivity(Intent(this, AboutActivity::class.java))
         }
+//        findViewById<Button>(R.id.button_about).setOnClickListener {
+//            startActivity(Intent(this, AboutActivity::class.java))
+//        }
     }
 
     private fun showAlertDialog(message: String) {
