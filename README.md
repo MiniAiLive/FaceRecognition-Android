@@ -18,6 +18,8 @@ https://drive.google.com/file/d/1VBr_nYo_TwFM7kPamxP2IFOAFZ43Bhq1/view?usp=shari
 >
 > SDK is fully on-premise, processing all happens on hosting server and no data leaves server.
 
+https://github.com/MiniAiLive/MiniAI-Face-Recognition-AndroidSDK/assets/153516004/85a939ed-a607-478b-b48a-80b8582c37b6
+
 ## About MiniAiLive
 [MiniAiLive](https://www.miniai.live/) is a leading AI solutions company specializing in computer vision and machine learning technologies. We provide cutting-edge solutions for various industries, leveraging the power of AI to drive innovation and efficiency.
 
