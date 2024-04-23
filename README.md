@@ -1,6 +1,6 @@
 <div align="center">
    <h1> MiniAiLive Face Recognition Android SDK </h1>
-   <img src=https://www.miniai.live/wp-content/uploads/2023/03/logo_name-1-768x426.png alt="MiniAiLive Logo"
+   <img src=https://miniai.live/wp-content/uploads/2024/02/logo_name-1-768x426-1.png alt="MiniAiLive Logo"
    width="300">
 </div>
 
@@ -34,7 +34,7 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 5. Submit a pull request to the original repository.
 ```
 ## Try Online Demo
-Please visit our Face API Web Demo here. https://minivision.live
+Please visit our Face API Web Demo here. https://demo.miniai.live
 
 ## Related Product
 No | Project | Feature
