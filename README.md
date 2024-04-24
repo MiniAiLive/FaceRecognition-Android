@@ -1,5 +1,5 @@
 <div align="center">
-   <h1> MiniAiLive Face Recognition Android SDK </h1>
+   <h1> MiniAiLive Face Recognition LivenessDetection Android SDK </h1>
    <img src=https://miniai.live/wp-content/uploads/2024/02/logo_name-1-768x426-1.png alt="MiniAiLive Logo"
    width="300">
 </div>
@@ -39,10 +39,10 @@ Please visit our Face API Web Demo here. https://demo.miniai.live
 ## Related Product
 No | Project | Feature
 ---|---|---|
-1 | [MiniAI-Face-Recognition-AndroidSDK](https://github.com/MiniAiLive/MiniAI-Face-Recognition-AndroidSDK) | Face Matching, 3D Face Passive Liveness
-2 | [MiniAI-Face-Recognition-iOS-SDK](https://github.com/MiniAiLive/MiniAI-Face-Recognition-iOS-SDK) | Face Matching, 3D Face Passive Liveness
-3 | [MiniAI-Face-Recognition-ServerSDK](https://github.com/MiniAiLive/MiniAI-Face-Recognition-ServerSDK) | Face Matching, 3D Face Passive Liveness
-4 | [MiniAI-Face-Recognition-WindowsSDK](https://github.com/MiniAiLive/MiniAI-Face-Recognition-WindowsSDK) | Face Matching, 3D Face Passive Liveness
+1 | [MiniAI-Face-Recognition-LivenessDetection-AndroidSDK](https://github.com/MiniAiLive/MiniAI-Face-Recognition-LivenessDetection-AndroidSDK) | Face Matching, 3D Face Passive Liveness
+2 | [MiniAI-Face-Recognition-LivenessDetection-iOS-SDK](https://github.com/MiniAiLive/MiniAI-Face-Recognition-LivenessDetection-iOS-SDK) | Face Matching, 3D Face Passive Liveness
+3 | [MiniAI-Face-Recognition-LivenessDetection-ServerSDK](https://github.com/MiniAiLive/MiniAI-Face-Recognition-LivenessDetection-ServerSDK) | Face Matching, 3D Face Passive Liveness
+4 | [MiniAI-Face-Recognition-LivenessDetection-WindowsSDK](https://github.com/MiniAiLive/MiniAI-Face-Recognition-LivenessDetection-WindowsSDK) | Face Matching, 3D Face Passive Liveness
 5 | [MiniAI-Face-LivenessDetection-AndroidSDK](https://github.com/MiniAiLive/MiniAI-Face-LivenessDetection-AndroidSDK) | 3D Face Passive Liveness
 6 | [MiniAI-Face-LivenessDetection-iOS-SDK](https://github.com/MiniAiLive/MiniAI-Face-LivenessDetection-iOS-SDK) | 3D Face Passive Liveness
 7 | [MiniAI-Face-LivenessDetection-ServerSDK](https://github.com/MiniAiLive/MiniAI-Face-LivenessDetection-ServerSDK) | 3D Face Passive Liveness
