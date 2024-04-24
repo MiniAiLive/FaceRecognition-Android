@@ -35,6 +35,9 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 ```
 ## Try Online Demo
 Please visit our Face API Web Demo here. https://demo.miniai.live
+<a href="https://demo.miniai.live" target="_blank">
+  <img alt="" src="https://github.com/MiniAiLive/.github/assets/127708602/76a12888-a83d-4454-86bd-bcc8ef025ab5">
+</a>
 
 ## Related Product
 No | Project | Feature
