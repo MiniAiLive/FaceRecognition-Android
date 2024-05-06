@@ -1,5 +1,5 @@
 <div align="center">
-   <h1> Face Recognition LivenessDetection Android SDK </h1>
+   <h1> MiniAiLive Face Recognition LivenessDetection Android SDK </h1>
    <img src=https://miniai.live/wp-content/uploads/2024/02/logo_name-1-768x426-1.png alt="MiniAiLive Logo"
    width="300">
 </div>
