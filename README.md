@@ -1,5 +1,5 @@
 <div align="center">
-   <h1>FaceRecognition-LivenessDetection Android SDK</h1>
+   <h1>FaceRecognition Android SDK</h1>
    <img src=https://miniai.live/wp-content/uploads/2024/02/logo_name-1-768x426-1.png alt="MiniAiLive Logo"
    width="300">
 </div>
@@ -12,7 +12,7 @@ Feel free to use our MiniAI Face Recognition Android SDK.
 >
 > SDK is fully on-premise, processing all happens on hosting server and no data leaves server.
 
-## FaceRecognition-LivenessDetection APK
+## FaceRecognition APK
 <a href="https://play.google.com/store/apps/details?id=com.miniai.facerecognition&hl=en-HK" target="_blank">
   <img alt="" src="https://user-images.githubusercontent.com/125717930/230804673-17c99e7d-6a21-4a64-8b9e-a465142da148.png" height=80/>
 </a>
