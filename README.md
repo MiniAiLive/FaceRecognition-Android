@@ -1,5 +1,5 @@
 <div align="center">
-   <h1>Face Recognition LivenessDetection Android SDK</h1>
+   <h1>FaceRecognition-LivenessDetection Android SDK</h1>
    <img src=https://miniai.live/wp-content/uploads/2024/02/logo_name-1-768x426-1.png alt="MiniAiLive Logo"
    width="300">
 </div>
@@ -12,12 +12,12 @@ Feel free to use our MiniAI Face Recognition Android SDK.
 >
 > SDK is fully on-premise, processing all happens on hosting server and no data leaves server.
 
-## Enjoy APP on Google Play
+## FaceRecognition-LivenessDetection APK
 <a href="https://play.google.com/store/apps/details?id=com.miniai.facerecognition&hl=en-HK" target="_blank">
   <img alt="" src="https://user-images.githubusercontent.com/125717930/230804673-17c99e7d-6a21-4a64-8b9e-a465142da148.png" height=80/>
 </a>
 
-<br></br>
+<br>
 
 https://github.com/MiniAiLive/MiniAI-Face-Recognition-AndroidSDK/assets/153516004/85a939ed-a607-478b-b48a-80b8582c37b6
 
@@ -33,13 +33,24 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 4. Push your changes to your forked repository.
 5. Submit a pull request to the original repository.
 ```
-## Try Online Demo
-Please visit our Face API Web Demo here. https://demo.miniai.live
-<a href="https://demo.miniai.live" target="_blank">
-  <img alt="" src="https://github.com/MiniAiLive/FaceRecognition-LivenessDetection-Android-SDK/assets/127708602/bbefaafe-eb45-430f-9787-f4d1f895939f">
-</a>
 
-## Related Product
+## Face & IDSDK Online Demo, Resources
+<div style="display: flex; justify-content: center; align-items: center;"> 
+   <table style="text-align: center;">
+      <tr>
+         <td style="text-align: center; vertical-align: middle;"><a href="https://github.com/MiniAiLive"><img src="https://miniai.live/wp-content/uploads/2024/10/github-300x95.png" style="height: 80px; margin-right: 5px;" title="GITHUB"/></a></td> 
+         <td style="text-align: center; vertical-align: middle;"><a href="https://huggingface.co/MiniAiLive"><img src="https://miniai.live/wp-content/uploads/2024/10/huggingface-300x88.png" style="height: 80px; margin-right: 5px;" title="HuggingFace"/></a></td> 
+         <td style="text-align: center; vertical-align: middle;"><a href="https://demo.miniai.live"><img src="https://www.gradio.app/_app/immutable/assets/gradio.CHB5adID.svg" style="height: 80px; margin-right: 5px;" title="Gradio"/></a></td> 
+      </tr> 
+      <tr>
+         <td style="text-align: center; vertical-align: middle;"><a href="https://docs.miniai.live/"><img src="https://miniai.live/wp-content/uploads/2024/10/a-300x70.png" style="height: 80px; margin-right: 5px;" title="Documentation"/></a></td> 
+         <td style="text-align: center; vertical-align: middle;"><a href="https://www.youtube.com/@miniailive"><img src="https://miniai.live/wp-content/uploads/2024/10/Untitled-1-300x70.png" style="height: 80px; margin-right: 5px;" title="Youtube"/></a></td> 
+         <td style="text-align: center; vertical-align: middle;"><a href="https://play.google.com/store/apps/dev?id=5831076207730531667"><img src="https://miniai.live/wp-content/uploads/2024/10/googleplay-300x62.png" style="height: 80px; margin-right: 5px;" title="Google Play"/></a></td>
+      </tr>
+   </table>
+</div>
+
+## Our Products
 No | Project | Feature
 ---|---|---|
 1 | [FaceRecognition-LivenessDetection-Android-SDK](https://github.com/MiniAiLive/FaceRecognition-LivenessDetection) | Face Matching, 3D Face Passive Liveness
